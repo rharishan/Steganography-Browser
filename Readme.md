@@ -1,0 +1,1 @@
+Browser addon for Firefox to detect steganographically and asymmetrically encrypted content embedded in website content such as images, videos , audios and etc. At the same time these addons are caplble of encrypt contents steganographically inside the website contents. 
