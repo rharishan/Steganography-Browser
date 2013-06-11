@@ -1,0 +1,3 @@
+<popup id="contentAreaContextMenu">
+  <menuitem id="thumbnail-show" label="View Thumbnail" oncommand="Thumbnails.view();"/>
+</popup>

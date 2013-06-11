@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://tor-stego/locale/browserOverlay.dtd">
+<overlay id="tor-stego-overlay" 
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript"
+    src="chrome://tor-stego/content/js/browserOverlay.js" />
+
+<script type="application/x-javascript"
+    src="chrome://tor-stego/content/js/torStego.js" />
+
+<stringbundleset id="stringbundleset">
+    <stringbundle id="tor-stego-string-bundle"
+      src="chrome://tor-stego/locale/browserOverlay.properties" />
+</stringbundleset>
+
+<menupopup id="menu_ToolsPopup">
+  <menu id="tor-stego-menu" label="&torstego.menu.label;" insertbefore="devToolsEndSeparator">
+    <menupopup>
+      <menuitem id="tor-stego-encrypt-menu-item"
+        label="&torstego.encryptMenuItem.label;"
+        oncommand="TorOverlay.BrowserOverlay.start(event);" />
+	<menuitem id="tor-stego-decrypt-menu-item"
+        label="&torstego.decryptMenuItem.label;"
+        oncommand="TorOverlay.BrowserOverlay.start(event);" />
+    </menupopup>
+  </menu>
+</menupopup>
+
+<vbox id="appmenuSecondaryPane">
+  <menu id="tor-stego-menu-2" label="&torstego.menu.label;"   insertafter="appmenu_addons">
+    <menupopup>
+            <menuitem id="tor-stego-encrypt-menu-item"
+        label="&torstego.encryptMenuItem.label;"
+        oncommand="TorOverlay.BrowserOverlay.start(event);" />
+	<menuitem id="tor-stego-decrypt-menu-item"
+        label="&torstego.decryptMenuItem.label;"
+        oncommand="TorOverlay.BrowserOverlay.start(event);" />
+    </menupopup>
+  </menu>
+</vbox>
+
+<popup id="contentAreaContextMenu">
+<menu id="tor-stego-contextmenu" label="&torstego.menu.label;" insertafter="context-selectall">
+    <menupopup>
+            <menuitem id="tor-stego-encrypt-menu-item" label="&torstego.encryptMenuItem.label;" 
+        oncommand="TorOverlay.BrowserOverlay.start(event);" />
+	<menuitem id="tor-stego-decrypt-menu-item"
+        label="&torstego.decryptMenuItem.label;"
+        oncommand="TorOverlay.BrowserOverlay.start(event);" />
+    </menupopup>
+  </menu>
+</popup>
+
+</overlay>

@@ -1,0 +1,28 @@
+/**
+ * TorStego namespace.
+ */
+if ("undefined" == typeof(TorOverlay)) {
+  var TorOverlay = {};
+};
+
+TorOverlay.BrowserOverlay={
+    start : function(aEvent) {
+    window.open(
+  "chrome://tor-stego/content/tor-uploadwindow.xul",
+  "tor-stego-upload",
+  "chrome,centerscreen");
+  }
+};
+
+function init()
+{
+  var contextMenu = document.getElementById("contentAreaContextMenu");
+  if (contextMenu)
+    contextMenu.addEventListener("popupshowing", ThumbnailsShowHideItems, false);
+}
+ 
+function ThumbnailsShowHideItems(event)
+{
+  var show = document.getElementById("thumbnail-show");
+  show.hidden = (document.popupNode.localName != "IMG");
+}

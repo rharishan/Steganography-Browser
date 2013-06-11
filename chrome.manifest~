@@ -1,0 +1,6 @@
+content tor-stego chrome/content/
+skin tor-stego classic/1.0 chrome/skin/
+locale tor-stego en-US chrome/locale/en-US/
+
+overlay chrome://browser/content/browser.xul chrome://tor-stego/content/tor-stego.xul
+overlay chrome://browser/content/contextmenu.xul chrome://tor-stego/content/tor-contextmenu.xul
