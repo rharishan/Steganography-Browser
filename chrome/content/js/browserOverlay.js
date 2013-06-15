@@ -2,36 +2,54 @@
  * TorStego namespace.
  */
 if ("undefined" == typeof(TorOverlay)) {
-  var TorOverlay = {};
-};
-
-TorOverlay.ContextEncrypt={
-    start : function(aEvent) {
-    window.open(
-  "chrome://tor-stego/content/tor-context-encryptwindow.xul",
-  "tor-stego-contextencrypt",
-  "chrome,centerscreen");
-  }
-};
-
-TorOverlay.ContextDecrypt={
-    start : function(aEvent) {
-    window.open(
-  "chrome://tor-stego/content/tor-context-decryptwindow.xul",
-  "tor-stego-contextdecrypt",
-  "chrome,centerscreen");
-  }
-};
-
-function init()
-{
-  var contextMenu = document.getElementById("contentAreaContextMenu");
-  if (contextMenu)
-    contextMenu.addEventListener("popupshowing", ThumbnailsShowHideItems, false);
+    var TorOverlay = {};
 }
- 
-function ThumbnailsShowHideItems(event)
-{
-  var show = document.getElementById("thumbnail-show");
-  show.hidden = (document.popupNode.localName != "IMG");
-}
+;
+
+var isImage;
+var isSound;
+var isFile;
+var isHtml
+
+
+TorOverlay.ContextEncrypt = {
+    start: function (aEvent) {
+        window.open(
+            "chrome://tor-stego/content/tor-context-encryptwindow.xul",
+            "tor-stego-contextencrypt",
+            "chrome,centerscreen");
+    }
+};
+
+
+TorOverlay.ContextDecrypt = {
+    start: function (aEvent) {
+        window.open(
+            "chrome://tor-stego/content/tor-context-decryptwindow.xul",
+            "tor-stego-contextdecrypt",
+            "chrome,centerscreen");
+    }
+};
+
+
+
+TorOverlay.ContextOptionsMenu = {
+    start: function (aEvent) {
+        window.open(
+            "chrome://tor-stego/content/tor-options.xul",
+            "tor-stego-contextoptions",
+            "chrome,centerscreen");
+    }
+};
+
+TorOverlay.PopUpNode = {
+    init: function (aEvent) {
+        var element = document.popupNode;
+        isImage = (element instanceof Components.interfaces.nsIImageLoadingContent && element.currentURI);
+        isSound = (element instanceof Components.interfaces.nsISound && element.currentURI);
+        isFile = (element instanceof Components.interfaces.nsIFile && element.currentURI);
+        isHtml = (element instanceof Components.interfaces.nsIDOMHTMLDocument && element.currentURI);
+        //window.alert("hehe"+isImage);
+        //TorStego.Encrypt.init(isImage);
+    },
+};

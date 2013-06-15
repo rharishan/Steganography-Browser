@@ -2,7 +2,8 @@
  * TorStego namespace.
  */
 if ("undefined" == typeof(TorCipher)) {
-  var TorCipher = {};
-};
+    var TorCipher = {};
+}
+;
 
 

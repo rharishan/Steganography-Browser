@@ -1,39 +1,48 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://tor-stego/skin/tor-stego.css" type"text/css"?>
 <!DOCTYPE overlay SYSTEM "chrome://tor-stego/locale/browserOverlay.dtd">
 
-<window id="rootWnd" title="Add Message"
+<window id="rootWnd" title="Add Message" onload="TorStego.Encrypt.elementType();"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<script type="application/x-javascript"
-    src="chrome://tor-stego/content/js/browserOverlay.js" />
 
-<script type="text/css"
-    src="chrome://tor-stego/skin/uploadWindow.css" />
+    <script type="application/x-javascript"
+            src="chrome://tor-stego/content/js/torStego.js"/>
 
-<stringbundleset id="stringbundleset">
-    <stringbundle id="tor-stego-string-bundle"
-      src="chrome://tor-stego/locale/browserOverlay.properties" />
-</stringbundleset>
 
-<vbox>
-    <groupbox align="start">
-      <caption label="Encrypt Message"/>
-      <radiogroup>
-        <vbox>
-          <hbox>
-            <label control="your-fname" value="Enter first name:"/>
-            <textbox id="your-fname" value="Johan"/>
-          </hbox>
-          <hbox>
-            <label control="your-lname" value="Enter last name:"/>
-            <textbox id="your-lname" value="Hernandez"/>
-          </hbox>
-          <hbox>
-            <button oncommand="alert('save!')">
-              <description>Save</description>
-            </button>
-          </hbox>
-        </vbox>
-      </radiogroup>
-    </groupbox>
-  </vbox>
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="tor-stego-string-bundle"
+                      src="chrome://tor-stego/locale/browserOverlay.properties"/>
+    </stringbundleset>
+
+    <vbox>
+        <groupbox align="start">
+            <grid>
+                <columns>
+                    <column flex="1"/>
+                    <column flex="2"/>
+                </columns>
+                <rows>
+                    <row>
+
+                        <caption label="Content Selected:"/>
+                        <label id="elementtype"></label>
+                    </row>
+                    <row>
+                        <label control="message" value="Enter your message here:"/>
+                        <textbox id="message" multiline="true"/>
+                    </row>
+                    <row>
+                        <label control="publickey" value="Enter Public Key:"/>
+                        <textbox id="publickey"/>
+                    </row>
+                </rows>
+            </grid>
+            <hbox>
+                <button oncommand="alert('Download!')" align="centre">
+                    <description>Download</description>
+                </button>
+            </hbox>
+        </groupbox>
+    </vbox>
+</window>

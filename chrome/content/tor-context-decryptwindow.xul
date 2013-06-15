@@ -4,13 +4,15 @@
 
 <window id="rootWnd" title="Add Message"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<script type="application/x-javascript"
-    src="chrome://tor-stego/content/js/browserOverlay.js" />
+    <script type="application/x-javascript"
+            src="chrome://tor-stego/content/js/browserOverlay.js"/>
 
-<script type="text/css"
-    src="chrome://tor-stego/skin/uploadWindow.css" />
+    <script type="text/css"
+            src="chrome://tor-stego/skin/uploadWindow.css"/>
 
-<stringbundleset id="stringbundleset">
-    <stringbundle id="tor-stego-string-bundle"
-      src="chrome://tor-stego/locale/browserOverlay.properties" />
-</stringbundleset>
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="tor-stego-string-bundle"
+                      src="chrome://tor-stego/locale/browserOverlay.properties"/>
+    </stringbundleset>
+
+</window>
