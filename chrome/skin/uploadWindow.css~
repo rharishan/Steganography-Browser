@@ -1,7 +1,0 @@
-/*** XUL demonstration ***/
-window {
-  -moz-box-align: start;
-  background-color: -moz-dialog;
-  font: -moz-dialog;
-  padding: 2em;
-  }
