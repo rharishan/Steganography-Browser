@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://tor-stego/skin/tor-stego.css" type"text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://tor-stego/locale/browserOverlay.dtd">
+
+<window id="rootWnd" title="Add Message"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="tor-window">
+    <script type="application/x-javascript"
+            src="chrome://tor-stego/content/js/browserOverlay.js"/>
+
+
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="tor-stego-string-bundle"
+                      src="chrome://tor-stego/locale/browserOverlay.properties"/>
+    </stringbundleset>
+
+    <vbox>
+        <groupbox align="start">
+            <grid>
+                <columns>
+                    <column flex="1"/>
+                    <column flex="2"/>
+                </columns>
+                <rows>
+                    <row>
+                        <label value="Select File to decrypt"></label>
+                        <html:input type="file" value="true"/>
+                    </row>
+                    <row class="message">
+
+                    </row>
+                    <row>
+                        <label control="publickey" value="Enter Public Key:"/>
+                        <textbox id="publickey"/>
+                    </row>
+                </rows>
+            </grid>
+            <hbox>
+                <button oncommand="alert('Encrypt!')" align="centre">
+                    <description>Encrypt</description>
+                </button>
+            </hbox>
+        </groupbox>
+    </vbox>
+
+</window>

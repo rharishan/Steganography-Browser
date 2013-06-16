@@ -5,14 +5,23 @@ if ("undefined" == typeof(TorStego)) {
     var TorStego = {};
 };
 
+
 TorStego.Encrypt = {
-    init: function (ctype) {
-        var type = ctype;
-        window.alert(type);
+    init: function (pelement) {
+        var element = pelement;
+        //window.alert(type);
+
     },
 
-    elementType: function (aEvent) {
+    elementType: function () {
         var elementLabel = document.getElementById("elementtype");
+
+        //window.alert(window.element);
+        isImage = (element instanceof Components.interfaces.nsIImageLoadingContent && element.currentURI);
+         isSound = (element instanceof Components.interfaces.nsISound && element.currentURI);
+         isFile = (element instanceof Components.interfaces.nsIFile && element.currentURI);
+         isHtml = (element instanceof Components.interfaces.nsIDOMHTMLDocument && element.currentURI);
+        //window.alert("hehe"+isImage);
         var isImage = true;
         if (isImage) {
             elementLabel.setAttribute("value", "Image");

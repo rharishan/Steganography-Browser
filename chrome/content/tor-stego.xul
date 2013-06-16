@@ -20,10 +20,10 @@
             <menupopup>
                 <menuitem id="tor-stego-encrypt-menu-item"
                           label="&torstego.encryptMenuItem.label;"
-                          oncommand="TorOverlay.ContextEncrypt.start(event);"/>
+                          oncommand="TorOverlay.Encrypt.start(event);"/>
                 <menuitem id="tor-stego-decrypt-menu-item"
                           label="&torstego.decryptMenuItem.label;"
-                          oncommand="TorOverlay.ContextDecrypt.start(event);"/>
+                          oncommand="TorOverlay.Decrypt.start(event);"/>
                 <menuitem id="tor-stego-options-menu-item"
                           label="&torstego.optionsMenuItem.label;"
                           oncommand="TorOverlay.ContextOptionsMenu.start(event);"/>
@@ -36,10 +36,10 @@
             <menupopup>
                 <menuitem id="tor-stego-encrypt-menu-item"
                           label="&torstego.encryptMenuItem.label;"
-                          oncommand="TorOverlay.ContextEncrypt.start(event);"/>
+                          oncommand="TorOverlay.Encrypt.start(event);"/>
                 <menuitem id="tor-stego-decrypt-menu-item"
                           label="&torstego.decryptMenuItem.label;"
-                          oncommand="TorOverlay.ContextDecrypt.start(event);"/>
+                          oncommand="TorOverlay.Decrypt.start(event);"/>
                 <menuitem id="tor-stego-options-menu-item"
                           label="&torstego.optionsMenuItem.label;"
                           oncommand="TorOverlay.ContextOptionsMenu.start(event);"/>

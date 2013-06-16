@@ -1,3 +1,8 @@
 #tor-stego-toolbarbutton {
     list-style-image: url("chrome://tor-stego/skin/icons/logo-32x32.png");
 }
+
+.message{
+    min-height: 200px;
+    min-width: 400px;
+}

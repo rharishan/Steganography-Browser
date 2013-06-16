@@ -3,11 +3,13 @@
 <?xml-stylesheet href="chrome://tor-stego/skin/tor-stego.css" type"text/css"?>
 <!DOCTYPE overlay SYSTEM "chrome://tor-stego/locale/browserOverlay.dtd">
 
-<window id="rootWnd" title="Add Message" onload="TorStego.Encrypt.elementType();"
-        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<window id="rootWnd" title="Add Message"  onload="TorStego.Encrypt.elementType();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="tor-window">
 
     <script type="application/x-javascript"
             src="chrome://tor-stego/content/js/torStego.js"/>
+    <script type="application/x-javascript"
+            src="chrome://tor-stego/content/js/browserOverlay.js"/>
 
 
     <stringbundleset id="stringbundleset">
@@ -28,7 +30,7 @@
                         <caption label="Content Selected:"/>
                         <label id="elementtype"></label>
                     </row>
-                    <row>
+                    <row class="message">
                         <label control="message" value="Enter your message here:"/>
                         <textbox id="message" multiline="true"/>
                     </row>
