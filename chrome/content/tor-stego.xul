@@ -62,4 +62,38 @@
         </menu>
     </popup>
 
+
+    <!--<toolbarpalette id="BrowserToolbarPalette">
+
+        <toolbaritem
+                class=""
+                id="" align="center" pack="end" flex="0" context="_child"
+                label="TorStego"
+                >
+            <image id="dwhelper-palette-image" src="chrome://tor-stego/skin/icons/dwhelper16-on.gif" collapsed="true"/>
+            <panel id=""
+                   class=""
+                   flex="0"
+                   orient="horizontal"
+                   label="TorVersionName"
+                   tooltiptext="Torversionname"
+                   image="chrome://tor-stego/skin/icons/dwhelper16-on.gif"
+                    />
+        </toolbaritem>
+
+    </toolbarpalette>-->
+
+    <!-- Firefox -->
+    <toolbarpalette id="BrowserToolbarPalette">
+        <toolbarbutton id="tor-stego-toolbarbutton"
+                       class="toolbarbutton"
+                       label="Tor-Stego"
+                       tooltiptext="Tor-Stego Extension"
+                       oncommand="TorOverlay.CustomButton.click(event);" />
+
+        <!-- More buttons here. -->
+    </toolbarpalette>
+
+
+
 </overlay>

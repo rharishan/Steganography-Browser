@@ -21,6 +21,14 @@ TorOverlay.ContextEncrypt = {
     }
 };
 
+TorOverlay.CustomButton = {
+
+    click: function (aEvent) {
+        alert("Just testing")
+    }
+
+};
+
 
 TorOverlay.ContextDecrypt = {
     start: function (aEvent) {
@@ -45,6 +53,7 @@ TorOverlay.ContextOptionsMenu = {
 TorOverlay.PopUpNode = {
     init: function (aEvent) {
         var element = document.popupNode;
+        window.alert(element);
         isImage = (element instanceof Components.interfaces.nsIImageLoadingContent && element.currentURI);
         isSound = (element instanceof Components.interfaces.nsISound && element.currentURI);
         isFile = (element instanceof Components.interfaces.nsIFile && element.currentURI);
@@ -52,4 +61,6 @@ TorOverlay.PopUpNode = {
         //window.alert("hehe"+isImage);
         //TorStego.Encrypt.init(isImage);
     },
+
+
 };

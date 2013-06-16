@@ -4,4 +4,3 @@
 if ("undefined" == typeof(TorStego)) {
     var TorStego = {};
 };
-

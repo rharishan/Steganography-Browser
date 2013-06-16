@@ -22,7 +22,7 @@
     <em:description>Steganography Browser Addon</em:description>
     <em:creator>Tor</em:creator>
     <em:homepageURL>https://www.torproject.org/‎</em:homepageURL>
-   <!-- <em:iconURL>"chrome://tor-stego/content/icon.png" </em:iconURL> -->
+    <em:iconURL>"chrome://tor-stego/skin/icons/icon.png"</em:iconURL>
 
     <em:file>
       <Description about="urn:mozilla:extension:custombutton">
