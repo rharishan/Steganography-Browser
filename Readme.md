@@ -11,4 +11,4 @@ Installation Steps:
 For further details about installation from source : https://developer.mozilla.org/en-US/docs/Building_an_Extension#Test
 
 Add ToolBarIcon for Tor-Stego extension :
-Click on view->Toolbars->Customize and select Tor-Stego icon and drag and place it in the desired location in toolbar.
+Click on view->Toolbars->Customize and select Steganography-Browser icon and drag and place it in the desired location in toolbar.

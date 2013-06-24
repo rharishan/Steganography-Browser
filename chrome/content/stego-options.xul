@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://browser-stego/skin/stego.css" type"text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://browser-stego/locale/browserOverlay.dtd">
+<prefwindow id="stego-options"
+            title="Browser Steganography Options"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script type="application/x-javascript"
+            src="chrome://browser-stego/content/js/options.js"/>
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="stego-string-bundle"
+                      src="chrome://browser-stego/locale/browserOverlay.properties"/>
+    </stringbundleset>
+
+
+    <prefpane id="pandorafms-pane" label="Event Viewer Settings">
+    <preferences>
+        <preference id="ipaddress" name="" type="string"/>
+    </preferences>
+    <tabbox id="myTabList" selectedIndex="0">
+        <tabs>
+            <tab label="Key Pairs"/>
+            <tab label="CipherTexts"/>
+            <tab label="Content Filters"/>
+        </tabs>
+        <tabpanels>
+            <tabpanel>
+                <groupbox>
+                    <grid>
+                        <columns>
+                            <column width="200px"></column>
+                            <column width="200px"></column>
+                            <column width="200px"></column>
+                        </columns>
+                        <rows>
+                            <row>
+                                <button>
+                                    <description>Generate keys</description>
+                                </button>
+                                <button>
+                                    <description>Upload keys from file</description>
+                                </button>
+                                <button>
+                                    <description>Save keys to file</description>
+                                </button>
+                            </row>
+                        </rows>
+                    </grid>
+                    <groupbox>
+                    <caption label="Already existing key pairs"/>
+                    <grid>
+                        <columns>
+                            <column width="300px"></column>
+                            <column width="300px"></column>
+                            <column width="100px"></column>
+                        </columns>
+                        <rows>
+                            <row>
+                                <label value="Public Keys"></label>
+                                <label value="Private Keys"></label>
+                            </row>
+                        </rows>
+                    </grid>
+                    </groupbox>
+                </groupbox>
+            </tabpanel>
+            <tabpanel>
+                <groupbox>
+                    <grid>
+                        <columns>
+                            <column width="300px"></column>
+                            <column width="300px"></column>
+                        </columns>
+                        <rows>
+                            <row>
+                                <button><description>Download all ciphertext</description></button>
+                                <button><description>Clear all ciphertext</description></button>
+                            </row>
+                        </rows>
+                    </grid>
+                    <groupbox>
+                        <caption label="Already existing key pairs"/>
+                        <grid>
+                            <columns>
+                                <column width="300px"></column>
+                                <column width="300px"></column>
+                            </columns>
+                            <rows>
+                                <row>
+                                    <label value="Content Name"></label>
+                                    <label value="Ciphertext"></label>
+                                </row>
+                            </rows>
+                        </grid>
+                    </groupbox>
+                </groupbox>
+            </tabpanel>
+            <tabpanel>
+                    <groupbox>
+                        <grid>
+                            <columns>
+                                <column width="300px"></column>
+                                <column></column>
+                            </columns>
+                            <rows>
+                                <row>
+                                    <button><description>Add New Filter</description></button>
+                                    <radiogroup preference="">
+                                        <hbox>
+                                        <label value="Filtering of URLs:"/>
+                                        <radio id="" label="Enabled" accesskey="R"  value="true" oncommand=""/>
+                                        <radio id="" label="Disabled"  accesskey="G"  selected="true" value="false" oncommand=""/>
+                                        </hbox>
+                                    </radiogroup>
+
+                                </row>
+                            </rows>
+                        </grid>
+                        <groupbox>
+                            <caption label="Already existing Filters"/>
+                            <grid>
+                                <columns>
+                                    <column width="300px"></column>
+                                    <column width="200px"></column>
+                                    <column></column>
+                                </columns>
+                                <rows>
+                                    <row>
+                                        <label value="URL Filters"></label>
+                                        <label value="Contents Selection"></label>
+                                    </row>
+                                </rows>
+                            </grid>
+                        </groupbox>
+                    </groupbox>
+            </tabpanel>
+        </tabpanels>
+    </tabbox>
+    </prefpane>
+</prefwindow>

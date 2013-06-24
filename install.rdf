@@ -4,7 +4,7 @@
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
  
   <Description about="urn:mozilla:install-manifest">
-    <em:id>tor-stego@tor.com</em:id>
+    <em:id>browser-stego@stego.com</em:id>
     <em:version>1.0</em:version>
     
     <!-- Target Application this extension can install into, 
@@ -18,15 +18,15 @@
     </em:targetApplication>
     
     <!-- Front End MetaData -->
-    <em:name>Tor-Extension</em:name>
+    <em:name>Steganography-Browser</em:name>
     <em:description>Steganography Browser Addon</em:description>
-    <em:creator>Tor</em:creator>
-    <em:homepageURL>https://www.torproject.org/‎</em:homepageURL>
-    <em:iconURL>"chrome://tor-stego/skin/icons/icon.png"</em:iconURL>
+    <em:creator>Hareesan</em:creator>
+    <!--<em:homepageURL>‎</em:homepageURL>    -->
+    <em:iconURL>"chrome://browser-stego/skin/icons/icon.png"</em:iconURL>
 
     <em:file>
       <Description about="urn:mozilla:extension:custombutton">
-        <em:package>content/tor-stego/</em:package>
+        <em:package>content/browser-stego/</em:package>
 	</Description>
     </em:file>
 
