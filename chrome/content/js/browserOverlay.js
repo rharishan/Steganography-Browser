@@ -1,6 +1,9 @@
 /**
  * Stego namespace.
  */
+
+Components.utils.import("resource://browser-stego/stego-contentHandler.jsm");
+
 if ("undefined" == typeof(Overlay)) {
     var Overlay = {};
 }
@@ -19,7 +22,7 @@ Overlay.ContextEncrypt = {
 Overlay.CustomButton = {
 
     click: function (aEvent) {
-        alert("Just testing")
+        alert(foo())  ;
     }
 
 };
@@ -63,7 +66,10 @@ Overlay.ContextOptionsMenu = {
 
 Overlay.PopUpNode = {
     init: function (aEvent) {
-        window.element = document.popupNode;
+        var element = document.popupNode;
+        var elementLabel = document.getElementById("elementtype");
+        var contenthandler = new ContentHandler (element);
+        window.alert(contenthandler.getContentType());
     }
 
 
