@@ -49,7 +49,7 @@
 
     <popup id="contentAreaContextMenu">
         <menu id="stego-contextmenu" label="&stego.menu.label;" insertafter="context-selectall">
-            <menupopup onclick="Overlay.PopUpNode.init(event);">
+            <menupopup> <!--onclick="Overlay.PopUpNode.init(event);"-->
                 <menuitem id="stego-encrypt-menu-item" label="&stego.encryptMenuItem.label;"
                           oncommand="Overlay.ContextEncrypt.start(event);"/>
                 <menuitem id="stego-decrypt-menu-item"
@@ -58,6 +58,8 @@
                 <menuitem id="stego-options-menu-item"
                           label="&stego.optionsMenuItem.label;"
                           oncommand="Overlay.ContextOptionsMenu.start(event);"/>
+                <menuitem id="stego-encrypt-menu-item" label="Test"
+                          oncommand="Overlay.PopUpNode.init(event);"/>
             </menupopup>
         </menu>
     </popup>

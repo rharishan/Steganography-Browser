@@ -16,7 +16,7 @@ Overlay.ContextEncrypt = {
             "chrome://browser-stego/content/stego-context-encryptwindow.xul",
             "stego-contextencrypt",
             "chrome,centerscreen");
-    }
+    },
 };
 
 Overlay.CustomButton = {
@@ -69,8 +69,18 @@ Overlay.PopUpNode = {
         var element = document.popupNode;
         var elementLabel = document.getElementById("elementtype");
         var contenthandler = new ContentHandler (element);
-        window.alert(contenthandler.getContentType());
+        var type=contenthandler.getContentType();
+        if(type=="image"){
+            var imageData=contenthandler.getImageFromURL(element.src);
+            window.alert(imageData);
+        }
+        else
+            window.alert(element);
+        //window.alert(element);
+       // contenthandler.getContentType();
+        //window.alert(contenthandler.getContentType()) ;
+       /* if(contenthandler.getContentType()){
+            window.alert(contenthandler.getImageFromURL(element.getURI()));
+        }*/
     }
-
-
 };
