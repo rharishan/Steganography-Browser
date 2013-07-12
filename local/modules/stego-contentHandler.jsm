@@ -14,7 +14,7 @@ ContentHandler.prototype.getContentType=function(){
         return "image"  ;
     }
     else {
-        return "testttttt";
+        return XPCNativeWrapper.unwrap(this.element).nodeName;
     }
 }
 

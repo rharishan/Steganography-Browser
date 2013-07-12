@@ -3,6 +3,8 @@
  */
 
 Components.utils.import("resource://browser-stego/stego-contentHandler.jsm");
+Components.utils.import("resource://browser-stego/stego-downloader.jsm");
+
 
 if ("undefined" == typeof(Overlay)) {
     var Overlay = {};
@@ -68,35 +70,27 @@ Overlay.PopUpNode = {
     init: function (aEvent) {
         var element = document.popupNode;
        // var elementLabel = document.getElementById("elementtype");
+        //window.alert();
+
         var contenthandler = new ContentHandler (element);
+        var downloader= new StegoDownloader();
         var type=contenthandler.getContentType();
+        //window.alert(type);
+
         if(type=="image"){
-            var imageData=contenthandler.getImageFromURL(element.src);
+            var imageData=downloader.downloadImage(element.src);
             window.alert(imageData);
         }
-        else
-            window.alert(element);
-        //window.alert(element);
-       // contenthandler.getContentType();
-        //window.alert(contenthandler.getContentType()) ;
-       /* if(contenthandler.getContentType()){
-            window.alert(contenthandler.getImageFromURL(element.getURI()));
-        }*/
-    },
-
-    load : function (aEvent){
-
-       // window.alert(document)    ;
-       var flash1=document.getElementsByTagName("iframe");
-       var flash2=document.getElementsByTagName("object");
-       var flash3=document.getElementsByTagName("embed");
-       var i=0;
-       while(i<=flash1.length){
-            window.alert(flash1.item(i).src);
-            i++;
-       }
-
-
-
+        else if(type=="VIDEO"){
+            var content=XPCNativeWrapper.unwrap(element);
+            var videoData=downloader.downloadHTMLVideo(content.currentSrc);
+            alert(videoData);
+        }
+        else if(type=="AUDIO"){
+            var content=XPCNativeWrapper.unwrap(element);
+            alert(content);
+            var audioData=downloader.downloadHTMLAudio(content.currentSrc);
+            alert(audioData);
+        }
     }
 };
