@@ -3,7 +3,7 @@
 <?xml-stylesheet href="chrome://browser-stego/skin/stego.css" type"text/css"?>
 <!DOCTYPE overlay SYSTEM "chrome://browser-stego/locale/browserOverlay.dtd">
 <prefwindow id="stego-options"
-            title="Browser Steganography Options"
+            title="&stego.menu.options.title;"
             xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
     <script type="application/x-javascript"
@@ -14,15 +14,15 @@
     </stringbundleset>
 
 
-    <prefpane id="pandorafms-pane" label="Event Viewer Settings">
+    <prefpane id="pandorafms-pane" label="&stego.menu.options.title;">
     <preferences>
         <preference id="ipaddress" name="" type="string"/>
     </preferences>
     <tabbox id="myTabList" selectedIndex="0">
         <tabs>
-            <tab label="Key Pairs"/>
-            <tab label="CipherTexts"/>
-            <tab label="Content Filters"/>
+            <tab label="&stego.menu.options.keypairs;"/>
+            <tab label="&stego.menu.options.cipher;"/>
+            <tab label="&stego.menu.options.filters;"/>
         </tabs>
         <tabpanels>
             <tabpanel>
@@ -36,19 +36,19 @@
                         <rows>
                             <row>
                                 <button>
-                                    <description>Generate keys</description>
+                                    <description>&stego.menu.options.keypairs.generate;</description>
                                 </button>
                                 <button>
-                                    <description>Upload keys from file</description>
+                                    <description>&stego.menu.options.keypairs.upload;</description>
                                 </button>
                                 <button>
-                                    <description>Save keys to file</description>
+                                    <description>&stego.menu.options.keypairs.save;</description>
                                 </button>
                             </row>
                         </rows>
                     </grid>
                     <groupbox>
-                    <caption label="Already existing key pairs"/>
+                    <caption label="&stego.menu.options.keypairs.existing;"/>
                     <grid>
                         <columns>
                             <column width="300px"></column>
@@ -57,8 +57,8 @@
                         </columns>
                         <rows>
                             <row>
-                                <label value="Public Keys"></label>
-                                <label value="Private Keys"></label>
+                                <label value="&stego.menu.options.keypairs.publickey;"></label>
+                                <label value="&stego.menu.options.keypairs.privatekey;"></label>
                             </row>
                         </rows>
                     </grid>
@@ -74,13 +74,13 @@
                         </columns>
                         <rows>
                             <row>
-                                <button><description>Download all ciphertext</description></button>
-                                <button><description>Clear all ciphertext</description></button>
+                                <button><description>&stego.menu.options.cipher.downloadall;</description></button>
+                                <button><description>&stego.menu.options.cipher.clearall;</description></button>
                             </row>
                         </rows>
                     </grid>
                     <groupbox>
-                        <caption label="Already existing key pairs"/>
+                        <caption label="&stego.menu.options.cipher.existing;"/>
                         <grid>
                             <columns>
                                 <column width="300px"></column>
@@ -88,8 +88,8 @@
                             </columns>
                             <rows>
                                 <row>
-                                    <label value="Content Name"></label>
-                                    <label value="Ciphertext"></label>
+                                    <label value="&stego.menu.options.cipher.content;"></label>
+                                    <label value="&stego.menu.options.cipher.cipher;"></label>
                                 </row>
                             </rows>
                         </grid>
@@ -105,12 +105,12 @@
                             </columns>
                             <rows>
                                 <row>
-                                    <button><description>Add New Filter</description></button>
+                                    <button><description>&stego.menu.options.filters.new;</description></button>
                                     <radiogroup preference="">
                                         <hbox>
-                                        <label value="Filtering of URLs:"/>
-                                        <radio id="" label="Enabled" accesskey="R"  value="true" oncommand=""/>
-                                        <radio id="" label="Disabled"  accesskey="G"  selected="true" value="false" oncommand=""/>
+                                        <label value="&stego.menu.options.filters.filtering;"/>
+                                        <radio id="" label="&stego.menu.options.filters.filtering.enable;" accesskey="R"  value="true" oncommand=""/>
+                                        <radio id="" label="&stego.menu.options.filters.filtering.disable;"  accesskey="G"  selected="true" value="false" oncommand=""/>
                                         </hbox>
                                     </radiogroup>
 
@@ -118,7 +118,7 @@
                             </rows>
                         </grid>
                         <groupbox>
-                            <caption label="Already existing Filters"/>
+                            <caption label="&stego.menu.options.filters.existing;"/>
                             <grid>
                                 <columns>
                                     <column width="300px"></column>
@@ -127,8 +127,8 @@
                                 </columns>
                                 <rows>
                                     <row>
-                                        <label value="URL Filters"></label>
-                                        <label value="Contents Selection"></label>
+                                        <label value="&stego.menu.options.filters.url;"></label>
+                                        <label value="&stego.menu.options.filters.content;"></label>
                                     </row>
                                 </rows>
                             </grid>

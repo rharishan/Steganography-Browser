@@ -3,7 +3,7 @@
 <?xml-stylesheet href="chrome://browser-stego/skin/stego.css" type"text/css"?>
 <!DOCTYPE overlay SYSTEM "chrome://browser-stego/locale/browserOverlay.dtd">
 
-<window id="rootWnd" title="Add Message"
+<window id="rootWnd" title="&stego.menu.decrypt.title;"
         xmlns:html="http://www.w3.org/1999/xhtml"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="stego-window">
     <script type="application/x-javascript"
@@ -24,7 +24,7 @@
                 </columns>
                 <rows>
                     <row>
-                        <label value="Select File to decrypt"></label>
+                        <label value="&stego.menu.menubar.selection;"></label>
                         <html:input type="file" value="true"/>
                     </row>
                     <row class="message">
@@ -34,7 +34,7 @@
             </grid>
             <hbox>
                 <button oncommand="alert('Decrypt!')" align="centre">
-                    <description>Decrypt</description>
+                    <description>&stego.menu.decrypt.button;</description>
                 </button>
             </hbox>
         </groupbox>

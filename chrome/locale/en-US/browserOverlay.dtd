@@ -3,3 +3,61 @@
 <!ENTITY stego.decryptMenuItem.label       "Decrypt Message">
 <!ENTITY stego.optionsMenuItem.label       "Options">
 
+
+
+
+
+<!ENTITY stego.menu.title            "Stegonography Browser">
+<!ENTITY stego.menu.encrypt            "Encrypt">
+<!ENTITY stego.menu.decrypt            "Decrypt">
+<!ENTITY stego.menu.options            "Options">
+
+
+
+<!ENTITY stego.menu.context.selection            "Content Selected is:">
+<!ENTITY stego.menu.menubar.selection            "Select Content">
+
+<!ENTITY stego.menu.encrypt.title            "Encrypt Message">
+<!ENTITY stego.menu.encrypt.input            "Enter Message Here">
+<!ENTITY stego.menu.encrypt.button            "Encrypt">
+<!ENTITY stego.menu.encrypt.key            "Public Key :">
+
+
+<!ENTITY stego.menu.decrypt.title            "Decrypt Message">
+<!ENTITY stego.menu.decrypt.input            "Your Message is">
+<!ENTITY stego.menu.decrypt.button            "Decrypt">
+<!ENTITY stego.menu.decrypt.key            "Public Key :">
+
+
+
+
+<!ENTITY stego.menu.options.title            "Options">
+<!ENTITY stego.menu.options.close            "Close">
+
+<!ENTITY stego.menu.options.keypairs            "Key Pairs">
+<!ENTITY stego.menu.options.cipher            "Ciphertexts">
+<!ENTITY stego.menu.options.filters            "Content Filters">
+
+
+<!ENTITY stego.menu.options.keypairs.generate           "Generate Keys">
+<!ENTITY stego.menu.options.keypairs.upload            "Upload keys from file">
+<!ENTITY stego.menu.options.keypairs.save            "Save Keys">
+<!ENTITY stego.menu.options.keypairs.existing           "Existing Key Pairs">
+<!ENTITY stego.menu.options.keypairs.publickey          "Public Keys">
+<!ENTITY stego.menu.options.keypairs.privatekey            "Private Keys">
+
+
+<!ENTITY stego.menu.options.cipher.downloadall           "Download all cipher texts">
+<!ENTITY stego.menu.options.cipher.clearall            "Clear all">
+<!ENTITY stego.menu.options.cipher.existing           "Existing Key Pairs">
+<!ENTITY stego.menu.options.cipher.content          "Content Name">
+<!ENTITY stego.menu.options.cipher.cipher            "Cipher Texts">
+
+<!ENTITY stego.menu.options.filters.new           "Add new filter">
+<!ENTITY stego.menu.options.filters.filtering            "Filtering of URLs">
+<!ENTITY stego.menu.options.filters.filtering.enable            "Enable">
+<!ENTITY stego.menu.options.filters.filtering.disable            "Disable">
+<!ENTITY stego.menu.options.filters.existing           "Existing Filters">
+<!ENTITY stego.menu.options.filters.url          "URL Filters">
+<!ENTITY stego.menu.options.filters.content            "Content Selection">
+

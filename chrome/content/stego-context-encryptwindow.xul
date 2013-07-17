@@ -3,7 +3,7 @@
 <?xml-stylesheet href="chrome://browser-stego/skin/stego.css" type"text/css"?>
 <!DOCTYPE overlay SYSTEM "chrome://browser-stego/locale/browserOverlay.dtd">
 
-<window id="rootWnd" title="Add Message"  onload="Stego.Encrypt.elementType();"
+<window id="rootWnd" title="&stego.menu.encrypt.title;"  onload="Stego.Encrypt.elementType();"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="stego-window">
 
     <script type="application/x-javascript"
@@ -27,22 +27,22 @@
                 <rows>
                     <row>
 
-                        <caption label="Content Selected:"/>
+                        <caption label="&stego.menu.context.selection;"/>
                         <label id="elementtype"></label>
                     </row>
                     <row class="message">
-                        <label control="message" value="Enter your message here:"/>
+                        <label control="message" value="&stego.menu.encrypt.input;"/>
                         <textbox id="message" multiline="true"/>
                     </row>
                     <row>
-                        <label control="publickey" value="Enter Public Key:"/>
+                        <label control="publickey" value="&stego.menu.encrypt.key;"/>
                         <textbox id="publickey"/>
                     </row>
                 </rows>
             </grid>
             <hbox>
                 <button oncommand="alert('Download!')" align="centre">
-                    <description>Download</description>
+                    <description>&stego.menu.encrypt.button;</description>
                 </button>
             </hbox>
         </groupbox>
