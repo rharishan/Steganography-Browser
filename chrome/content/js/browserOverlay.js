@@ -4,6 +4,7 @@
 
 Components.utils.import("resource://browser-stego/stego-contentHandler.jsm");
 Components.utils.import("resource://browser-stego/stego-downloader.jsm");
+Components.utils.import("resource://browser-stego/stego-uploader.jsm");
 
 
 if ("undefined" == typeof(Overlay)) {
@@ -72,9 +73,9 @@ Overlay.PopUpNode = {
        // var elementLabel = document.getElementById("elementtype");
         //window.alert();
 
-        var contenthandler = new ContentHandler (element);
+        var contenthandler = new ContentHandler();
         var downloader= new StegoDownloader();
-        var type=contenthandler.getContentType();
+        var type=contenthandler.getContentType(element);
         //window.alert(type);
 
         if(type=="image"){
@@ -93,4 +94,17 @@ Overlay.PopUpNode = {
             alert(audioData);
         }
     }
+};
+
+Overlay.ContentUpload= {
+     upload: function(url){
+         var url=url;
+         var stegouploader=new StegoUploader();
+         var contenthandler=new ContentHandler();
+         var type=contenthandler.getContentType(url);
+         var data=stegouploader.uploadFile(url);
+        // window.alert(url);
+         window.alert(data);
+
+     }
 };
