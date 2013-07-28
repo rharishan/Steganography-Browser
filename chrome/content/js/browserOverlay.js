@@ -75,8 +75,8 @@ Overlay.PopUpNode = {
 
         var contenthandler = new ContentHandler();
         var downloader= new StegoDownloader();
-        var type=contenthandler.getContentType(element);
-        //window.alert(type);
+        var type=contenthandler.getContentTypeFromElement(element.currentSrc);
+        window.alert(type);
 
         if(type=="image"){
             var imageData=downloader.downloadImage(element.src);
@@ -101,10 +101,28 @@ Overlay.ContentUpload= {
          var url=url;
          var stegouploader=new StegoUploader();
          var contenthandler=new ContentHandler();
-         var type=contenthandler.getContentType(url);
+        // var type=contenthandler.getContentType(url);
          var data=stegouploader.uploadFile(url);
         // window.alert(url);
          window.alert(data);
 
      }
 };
+
+Overlay.Encryption={
+    encrypt: function(data, password){
+        var jsLoader=Components.classes["@mozilla.org/moz/jssubscript-loader;1"]
+            .getService(Components.interfaces.mozIJSSubScriptLoader);
+        jsLoader.loadSubScript("chrome://browser-stego/content/js/sjcl/sjcl.js");
+        var results= sjcl.encrypt(password, data);
+       window.alert( results );
+       window.alert(Overlay.Encryption.decrypt(results,password)) ;
+
+    },
+    decrypt: function(data, password){
+        var jsLoader=Components.classes["@mozilla.org/moz/jssubscript-loader;1"]
+            .getService(Components.interfaces.mozIJSSubScriptLoader);
+        jsLoader.loadSubScript("chrome://browser-stego/content/js/sjcl/sjcl.js");
+       return sjcl.decrypt(password, data);
+    }
+}

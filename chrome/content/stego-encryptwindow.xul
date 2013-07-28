@@ -10,6 +10,7 @@
             src="chrome://browser-stego/content/js/browserOverlay.js"/>
 
 
+
     <stringbundleset id="stringbundleset">
         <stringbundle id="stego-string-bundle"
                       src="chrome://browser-stego/locale/browserOverlay.properties"/>
@@ -32,7 +33,7 @@
                     </row>
                     <row>
                         <label control="publickey" value="Enter Public Key:"/>
-                        <textbox id="publickey"/>
+                        <textbox id="publickey" onchange="Overlay.Encryption.encrypt('test',this.value)"/>
                     </row>
                 </rows>
             </grid>

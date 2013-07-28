@@ -94,9 +94,15 @@
                        tooltiptext="&stego.menu.title;"
                        oncommand="Overlay.CustomButton.click(event);">
         <menupopup>
-            <menuitem label="&stego.menu.encrypt;"/>
-            <menuitem label="&stego.menu.decrypt;"/>
-            <menuitem label="&stego.menu.options;"/>
+            <menuitem id="stego-encrypt-menu-item"
+                      label="&stego.menu.encrypt;"
+                      oncommand="Overlay.Encrypt.start(event);"/>
+            <menuitem id="stego-decrypt-menu-item"
+                      label="&stego.menu.decrypt;"
+                      oncommand="Overlay.Decrypt.start(event);"/>
+            <menuitem id="stego-options-menu-item"
+                      label="&stego.menu.options;"
+                      oncommand="Overlay.ContextOptionsMenu.start(event);"/>
         </menupopup>
         </toolbarbutton>
         <!-- More buttons here. -->

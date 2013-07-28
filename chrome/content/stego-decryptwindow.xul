@@ -25,7 +25,7 @@
                 <rows>
                     <row>
                         <label value="&stego.menu.menubar.selection;"></label>
-                        <html:input type="file" value="true"/>
+                        <html:input type="file" value="true" onchange="Overlay.ContentUpload.upload(this.value)"/>
                     </row>
                     <row class="message">
 
