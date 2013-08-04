@@ -23,6 +23,7 @@
     <em:creator>Hareesan</em:creator>
     <!--<em:homepageURL>‎</em:homepageURL>    -->
     <em:iconURL>"chrome://browser-stego/skin/icons/icon.png"</em:iconURL>
+    <em:optionsURL>chrome://browser-stego/content/stego-options.xul</em:optionsURL>
 
     <em:file>
       <Description about="urn:mozilla:extension:custombutton">

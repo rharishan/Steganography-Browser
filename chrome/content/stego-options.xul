@@ -16,7 +16,7 @@
 
     <prefpane id="pandorafms-pane" label="&stego.menu.options.title;">
     <preferences>
-        <preference id="ipaddress" name="" type="string"/>
+        <preference id="filter-enabled" name="extensions.stego.filter.enabled" type="bool"/>
     </preferences>
     <tabbox id="myTabList" selectedIndex="0">
         <tabs>
@@ -106,7 +106,7 @@
                             <rows>
                                 <row>
                                     <button><description>&stego.menu.options.filters.new;</description></button>
-                                    <radiogroup preference="">
+                                    <radiogroup preference="filter-enabled">
                                         <hbox>
                                         <label value="&stego.menu.options.filters.filtering;"/>
                                         <radio id="" label="&stego.menu.options.filters.filtering.enable;" accesskey="R"  value="true" oncommand=""/>
