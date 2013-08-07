@@ -5,6 +5,7 @@
 Components.utils.import("resource://browser-stego/stego-contentHandler.jsm");
 Components.utils.import("resource://browser-stego/stego-downloader.jsm");
 Components.utils.import("resource://browser-stego/stego-uploader.jsm");
+Components.utils.import("resource://browser-stego/stego-dataHandler.jsm");
 
 
 if ("undefined" == typeof(Overlay)) {
@@ -124,5 +125,14 @@ Overlay.Encryption={
             .getService(Components.interfaces.mozIJSSubScriptLoader);
         jsLoader.loadSubScript("chrome://browser-stego/content/js/sjcl/sjcl.js");
        return sjcl.decrypt(password, data);
+    }
+};
+
+Overlay.DataHandler={
+    init: function(){
+        var stegoDataHandler= new StegoDataHandler();
+        window.alert("test");
+        stegoDataHandler.addKeyPairs("test","test");
+        window.alert(stegoDataHandler.getKeyPairs("test"));
     }
 }

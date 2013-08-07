@@ -7,7 +7,7 @@
             xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
     <script type="application/x-javascript"
-            src="chrome://browser-stego/content/js/options.js"/>
+            src="chrome://browser-stego/content/js/browserOverlay.js"/>
     <stringbundleset id="stringbundleset">
         <stringbundle id="stego-string-bundle"
                       src="chrome://browser-stego/locale/browserOverlay.properties"/>
@@ -74,7 +74,7 @@
                         </columns>
                         <rows>
                             <row>
-                                <button><description>&stego.menu.options.cipher.downloadall;</description></button>
+                                <button oncommand="Overlay.DataHandler.init();"><description>&stego.menu.options.cipher.downloadall;</description></button>
                                 <button><description>&stego.menu.options.cipher.clearall;</description></button>
                             </row>
                         </rows>
