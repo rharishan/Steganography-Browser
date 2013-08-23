@@ -7,7 +7,7 @@
         xmlns:html="http://www.w3.org/1999/xhtml"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="stego-window">
     <script type="application/x-javascript"
-            src="chrome://browser-stego/content/js/browserOverlay.js"/>
+            src="chrome://browser-stego/content/js/Stego.js"/>
 
 
 
@@ -26,19 +26,20 @@
                 <rows>
                     <row>
                         <label value="&stego.menu.menubar.selection;"></label>
-                        <html:input type="file" value="true" onchange="Overlay.ContentUpload.upload(this.value)"/>
+                        <html:input type="file" value="true"  onchange="Stego.onChange.change(this.value,'url');" />
                     </row>
                     <row class="message">
-
+			<label control="message" value="&stego.menu.encrypt.input;"/>
+                        <textbox id="message" multiline="true" onchange="Stego.onChange.change(this.value,'message');"/>
                     </row>
                     <row>
                         <label control="publickey" value="Enter Public Key:"/>
-                        <textbox id="publickey" onchange="Overlay.Encryption.encrypt('test',this.value)"/>
+                        <textbox id="publickey" onchange="Stego.onChange.change(this.value,'publickey');"/>
                     </row>
                 </rows>
             </grid>
             <hbox>
-                <button oncommand="alert('Encrypt!')" align="centre">
+                <button oncommand="Stego.Main.encrypt();" align="centre">
                     <description>&stego.menu.encrypt.button;</description>
                 </button>
             </hbox>

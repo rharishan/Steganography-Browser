@@ -5,7 +5,7 @@
 <window id="rootWnd" title="Add Message"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
     <script type="application/x-javascript"
-            src="chrome://browser-stego/content/js/browserOverlay.js"/>
+            src="chrome://browser-stego/content/js/Stego.js"/>
 
     <script type="text/css"
             src="chrome://browser-stego/skin/uploadWindow.css"/>

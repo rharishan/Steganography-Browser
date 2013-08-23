@@ -1,30 +1,42 @@
 
-EXPORTED_SYMBOLS=["ContentHandler"];
+EXPORTED_SYMBOLS=["ContentHandler","type"];
+
 
 
 function ContentHandler(){
-
+	
 }
 
 
 ContentHandler.prototype.getContentTypeFromElement=function(element){
     this.element = element;
     var isImage = (this.element instanceof Components.interfaces.nsIImageLoadingContent && this.element.currentURI);
-
+    var type=XPCNativeWrapper.unwrap(this.element).nodeName;
+    return type;
+/*
     if (isImage) {
-        return "image"  ;
+	this.type="image";
+        return this.type  ;
     }
     else {
-        return XPCNativeWrapper.unwrap(this.element).nodeName;
+	this.type=XPCNativeWrapper.unwrap(this.element).nodeName;
+        return this.type;
     }
+*/
 }
 
-//there are some problems in audio and video content types
+ContentHandler.prototype.getType=function(){
+	this.type="testing";
+	return this.type;
+}
 
+
+//there are some problems in audio and video content types
+/*
 ContentHandler.prototype.getContentTypeFromURL=function(url){
     this.url=url;
     var array_url=url.split(".");
-    var type=array_url[array_url.length-1].toLowerCase();
+    type=array_url[array_url.length-1].toLowerCase();
     switch (type){
         case "au":
             return "audio"
@@ -241,8 +253,6 @@ ContentHandler.prototype.getContentTypeFromURL=function(url){
             break;
         default :
             return "error"
-
     }
-
-
 }
+*/

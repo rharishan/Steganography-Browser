@@ -10,8 +10,7 @@ Components.utils.import("resource://browser-stego/stego-dataHandler.jsm");
 
 if ("undefined" == typeof(Overlay)) {
     var Overlay = {};
-}
-;
+};
 
 
 Overlay.ContextEncrypt = {
@@ -24,9 +23,8 @@ Overlay.ContextEncrypt = {
 };
 
 Overlay.CustomButton = {
-
     click: function (aEvent) {
-        Overlay.PopUpNode.load(aEvent);
+        Overlay.PopUpNode.init(aEvent);
     }
 
 };
@@ -73,29 +71,12 @@ Overlay.PopUpNode = {
         var element = document.popupNode;
        // var elementLabel = document.getElementById("elementtype");
         //window.alert();
-
-        var contenthandler = new ContentHandler();
-        var downloader= new StegoDownloader();
-        var type=contenthandler.getContentTypeFromElement(element.currentSrc);
-        window.alert(type);
-
-        if(type=="image"){
-            var imageData=downloader.downloadImage(element.src);
-            window.alert(imageData);
-        }
-        else if(type=="VIDEO"){
-            var content=XPCNativeWrapper.unwrap(element);
-            var videoData=downloader.downloadHTMLVideo(content.currentSrc);
-            alert(videoData);
-        }
-        else if(type=="AUDIO"){
-            var content=XPCNativeWrapper.unwrap(element);
-            alert(content);
-            var audioData=downloader.downloadHTMLAudio(content.currentSrc);
-            alert(audioData);
-        }
+	Components.utils.import("resource://browser-stego/stego-temp.jsm");
+	temp.element=element;
     }
 };
+
+/*
 
 Overlay.ContentUpload= {
      upload: function(url){
@@ -128,6 +109,35 @@ Overlay.Encryption={
     }
 };
 
+Overlay.PublicKeyCrypto={
+    generate: function(aEvent){
+        var jsLoader=Components.classes["@mozilla.org/moz/jssubscript-loader;1"]
+            .getService(Components.interfaces.mozIJSSubScriptLoader);
+        jsLoader.loadSubScript("chrome://browser-stego/content/js/rsa/BigInteger.init1.js");
+        jsLoader.loadSubScript("chrome://browser-stego/content/js/rsa/RSA.init1.js");
+        jsLoader.loadSubScript("chrome://browser-stego/content/js/rsa/SecureRandom.js");
+        jsLoader.loadSubScript("chrome://browser-stego/content/js/rsa/BigInteger.init2.js");
+        jsLoader.loadSubScript("chrome://browser-stego/content/js/rsa/RSA.init2.js");
+
+        // Import classes.
+        var RSA = __import( this,"titaniumcore.crypto.RSA" );
+        var BigInteger = __import( this,"titaniumcore.crypto.BigInteger" );
+
+        // Create an RSA engine.
+        var rsa = new RSA();
+        // Generate new RSA key.
+        var test=rsa.generate( 128,65537 );
+        window.alert( test );
+
+    },
+    decrypt: function(data, password){
+        var jsLoader=Components.classes["@mozilla.org/moz/jssubscript-loader;1"]
+            .getService(Components.interfaces.mozIJSSubScriptLoader);
+        jsLoader.loadSubScript("chrome://browser-stego/content/js/sjcl/sjcl.js");
+        return sjcl.decrypt(password, data);
+    }
+};
+
 Overlay.DataHandler={
     init: function(){
         var stegoDataHandler= new StegoDataHandler();
@@ -135,4 +145,4 @@ Overlay.DataHandler={
         stegoDataHandler.addKeyPairs("test","test");
         window.alert(stegoDataHandler.getKeyPairs("test"));
     }
-}
+}*/

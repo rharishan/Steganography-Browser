@@ -3,13 +3,10 @@
 <?xml-stylesheet href="chrome://browser-stego/skin/stego.css" type"text/css"?>
 <!DOCTYPE overlay SYSTEM "chrome://browser-stego/locale/browserOverlay.dtd">
 
-<window id="rootWnd" title="&stego.menu.encrypt.title;"  onload="Stego.Encrypt.elementType();"
-        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="stego-window">
-
+<window id="rootWnd" title="&stego.menu.encrypt.title;"  
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="stego-window" onload="Stego.onLoad.load();">
     <script type="application/x-javascript"
             src="chrome://browser-stego/content/js/Stego.js"/>
-    <script type="application/x-javascript"
-            src="chrome://browser-stego/content/js/browserOverlay.js"/>
 
 
     <stringbundleset id="stringbundleset">
@@ -26,22 +23,21 @@
                 </columns>
                 <rows>
                     <row>
-
                         <caption label="&stego.menu.context.selection;"/>
-                        <label id="elementtype"></label>
+                        <description id="type"></description>
                     </row>
                     <row class="message">
                         <label control="message" value="&stego.menu.encrypt.input;"/>
-                        <textbox id="message" multiline="true"/>
+                        <textbox id="message" multiline="true" onchange="Stego.onChange.change(this.value,'message');"/>
                     </row>
                     <row>
                         <label control="publickey" value="&stego.menu.encrypt.key;"/>
-                        <textbox id="publickey"/>
+                        <textbox id="publickey" onchange="Stego.onChange.change(this.value,'publickey');"/>
                     </row>
                 </rows>
             </grid>
             <hbox>
-                <button oncommand="alert('Download!')" align="centre">
+                <button oncommand="Stego.Main.contextencrypt();" align="centre">
                     <description>&stego.menu.encrypt.button;</description>
                 </button>
             </hbox>

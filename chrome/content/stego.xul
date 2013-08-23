@@ -7,9 +7,6 @@
     <script type="application/x-javascript"
             src="chrome://browser-stego/content/js/browserOverlay.js"/>
 
-    <script type="application/x-javascript"
-            src="chrome://browser-stego/content/js/Stego.js"/>
-
     <stringbundleset id="stringbundleset">
         <stringbundle id="stego-string-bundle"
                       src="chrome://browser-stego/locale/browserOverlay.properties"/>
@@ -48,10 +45,10 @@
     </vbox>
 
     <popup id="contentAreaContextMenu">
-        <menu id="stego-contextmenu" label="&stego.menu.title;" insertafter="context-selectall">
-            <menupopup> <!--onclick="Overlay.PopUpNode.init(event);"-->
+        <menu id="stego-contextmenu" label="&stego.menu.title;" insertafter="context-selectall" onclick="Overlay.PopUpNode.init(event);">
+            <menupopup> 
                 <menuitem id="stego-encrypt-menu-item" label="&stego.menu.encrypt;"
-                          oncommand="Overlay.ContextEncrypt.start(event);"/>
+                          oncommand="Overlay.ContextEncrypt.start(event);" />
                 <menuitem id="stego-decrypt-menu-item"
                           label="&stego.menu.decrypt;"
                           oncommand="Overlay.ContextDecrypt.start(event);"/>
@@ -59,7 +56,7 @@
                           label="&stego.menu.options;"
                           oncommand="Overlay.ContextOptionsMenu.start(event);"/>
                 <menuitem id="stego-encrypt-menu-item" label="Test"
-                          oncommand="Overlay.PopUpNode.init(event);"/>
+                          oncommand=""/>
             </menupopup>
         </menu>
     </popup>
@@ -92,7 +89,7 @@
                        class="toolbarbutton"
                        label="&stego.menu.title;"
                        tooltiptext="&stego.menu.title;"
-                       oncommand="Overlay.CustomButton.click(event);">
+                       ><!--oncommand="Overlay.CustomButton.click(event);"-->
         <menupopup>
             <menuitem id="stego-encrypt-menu-item"
                       label="&stego.menu.encrypt;"

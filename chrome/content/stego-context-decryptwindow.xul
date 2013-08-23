@@ -3,10 +3,8 @@
 <?xml-stylesheet href="chrome://browser-stego/skin/stego.css" type"text/css"?>
 <!DOCTYPE overlay SYSTEM "chrome://browser-stego/locale/browserOverlay.dtd">
 
-<window id="rootWnd" title="&stego.menu.decrypt.title;"         onload="Stego.Encrypt.elementType();"
-        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="stego-window">
-    <script type="application/x-javascript"
-            src="chrome://browser-stego/content/js/browserOverlay.js"/>
+<window id="rootWnd" title="&stego.menu.decrypt.title;"         
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="stego-window" onload="Stego.onLoad.load();"> 
 
 
     <script type="application/x-javascript"
@@ -26,9 +24,8 @@
                 </columns>
                 <rows>
                     <row>
-
                         <caption label="&stego.menu.context.selection;"/>
-                        <label id="elementtype"></label>
+                        <description id="type"></description>
                     </row>
                     <row class="message">
 
@@ -36,7 +33,7 @@
                 </rows>
             </grid>
             <hbox>
-                <button oncommand="alert('Decrypt')" align="centre">
+                <button oncommand="Stego.Main.contextdecrypt();" align="centre">
                     <description>&stego.menu.decrypt.button;</description>
                 </button>
             </hbox>
