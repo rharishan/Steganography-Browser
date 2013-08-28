@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://browser-stego/skin/stego.css" type"text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://browser-stego/locale/browserOverlay.dtd">
+
+<window id="rootWnd" title="&stego.menu.options.filters.new;"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="stego-window" onload="">
+    <script type="application/x-javascript"
+            src="chrome://browser-stego/content/js/Stego-options.js"/>
+
+
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="stego-string-bundle"
+                      src="chrome://browser-stego/locale/browserOverlay.properties"/>
+    </stringbundleset>
+
+    <vbox>
+        <groupbox align="start">
+            <!--<grid>
+                <columns>
+                    <column flex="1"/>
+                    <column flex="2"/>
+                    <column flex="2"/>
+                </columns>
+                <rows>
+                    <row>
+                        <caption label="&stego.menu.options.filters.url;"/>
+                        <textbox id="stego_url" ></textbox>
+
+                    </row>
+                    <row class="message">
+                        <label control="message" value="&stego.menu.encrypt.input;"/>
+                        <textbox id="message" multiline="true" onchange="Stego.onChange.change(this.value,'message');"/>
+                    </row>
+                    <row>
+                        <label control="publickey" value="&stego.menu.encrypt.key;"/>
+                        <textbox id="publickey" onchange="Stego.onChange.change(this.value,'publickey');"/>
+                    </row>
+                </rows>
+            </grid>-->
+            <hbox>
+                <caption label="&stego.menu.options.filters.url.input;"/>
+                <textbox id="stego_url" ></textbox>
+            </hbox>
+            <hbox>
+                <label value="&stego.menu.options.filters.selection.input;"></label>
+                <checkbox label="Video" id="video" checked="false" />
+                <checkbox label="Audio" id="audio" checked="false"/>
+                <checkbox label="Image" id="image" checked="false"/>
+                <checkbox label="HTML" id="html" checked="false"/>
+            </hbox>
+            <hbox>
+                <button oncommand="Options.Filters.onClick(event);" align="centre">
+                    <description>&stego.menu.options.filters.button;</description>
+                </button>
+            </hbox>
+        </groupbox>
+    </vbox>
+</window>

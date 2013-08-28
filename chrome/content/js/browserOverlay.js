@@ -25,6 +25,10 @@ Overlay.ContextEncrypt = {
 Overlay.CustomButton = {
     click: function (aEvent) {
         Overlay.PopUpNode.init(aEvent);
+        var stegoDataHandler= new StegoDataHandler();
+        /*window.alert("test");
+        stegoDataHandler.addKeyPairs("testiw","testlk");
+        window.alert(stegoDataHandler.getKeyPairs("testiw"));*/
     }
 
 };

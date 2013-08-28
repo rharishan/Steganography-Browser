@@ -4,17 +4,19 @@
 <!DOCTYPE overlay SYSTEM "chrome://browser-stego/locale/browserOverlay.dtd">
 <prefwindow id="stego-options"
             title="&stego.menu.options.title;"
-            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	    xmlns:html="http://www.w3.org/1999/xhtml"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" onload="Options.Filters.showFilters();">
 
     <script type="application/x-javascript"
-            src="chrome://browser-stego/content/js/browserOverlay.js"/>
+            src="chrome://browser-stego/content/js/Stego-options.js"/>
+
     <stringbundleset id="stringbundleset">
         <stringbundle id="stego-string-bundle"
                       src="chrome://browser-stego/locale/browserOverlay.properties"/>
     </stringbundleset>
 
 
-    <prefpane id="pandorafms-pane" label="&stego.menu.options.title;">
+    <prefpane id="pandorafms-pane" label="&stego.menu.options.title;" >
     <preferences>
         <preference id="filter-enabled" name="extensions.stego.filter.enabled" type="bool"/>
     </preferences>
@@ -96,7 +98,7 @@
                     </groupbox>
                 </groupbox>
             </tabpanel>
-            <tabpanel>
+            <tabpanel >
                     <groupbox>
                         <grid>
                             <columns>
@@ -105,7 +107,7 @@
                             </columns>
                             <rows>
                                 <row>
-                                    <button><description>&stego.menu.options.filters.new;</description></button>
+                                    <button oncommand="Options.Filters.add(event)"><description>&stego.menu.options.filters.new;</description></button>
                                     <radiogroup preference="filter-enabled">
                                         <hbox>
                                         <label value="&stego.menu.options.filters.filtering;"/>
@@ -119,7 +121,14 @@
                         </grid>
                         <groupbox>
                             <caption label="&stego.menu.options.filters.existing;"/>
-                            <grid>
+				<html:table id="stego_filters_table">
+					<html:tr>
+						<html:td width="300px">&stego.menu.options.filters.url;</html:td>
+						<html:td width="200px">&stego.menu.options.filters.content;</html:td>
+					</html:tr>
+				
+				</html:table>
+                            <!--<grid>
                                 <columns>
                                     <column width="300px"></column>
                                     <column width="200px"></column>
@@ -131,7 +140,7 @@
                                         <label value="&stego.menu.options.filters.content;"></label>
                                     </row>
                                 </rows>
-                            </grid>
+                            </grid>-->
                         </groupbox>
                     </groupbox>
             </tabpanel>

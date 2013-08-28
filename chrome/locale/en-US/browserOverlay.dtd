@@ -60,4 +60,7 @@
 <!ENTITY stego.menu.options.filters.existing           "Existing Filters">
 <!ENTITY stego.menu.options.filters.url          "URL Filters">
 <!ENTITY stego.menu.options.filters.content            "Content Selection">
+<!ENTITY stego.menu.options.filters.url.input            "URL ">
+<!ENTITY stego.menu.options.filters.selection.input            "Select contents ">
+<!ENTITY stego.menu.options.filters.button            "Save">
 

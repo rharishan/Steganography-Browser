@@ -89,7 +89,7 @@
                        class="toolbarbutton"
                        label="&stego.menu.title;"
                        tooltiptext="&stego.menu.title;"
-                       ><!--oncommand="Overlay.CustomButton.click(event);"-->
+                       oncommand="Overlay.CustomButton.click(event);">
         <menupopup>
             <menuitem id="stego-encrypt-menu-item"
                       label="&stego.menu.encrypt;"
