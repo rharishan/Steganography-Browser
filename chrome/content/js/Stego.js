@@ -1,5 +1,5 @@
 /**
- * TorStego namespace.
+ * This file handles other functionalities of the extension.
  */
 
 
@@ -15,7 +15,7 @@ if ("undefined" == typeof(Stego)) {
 
 
 Stego.onLoad = {
-    load: function (pelement) {
+    load: function () {
 	Components.utils.import("resource://browser-stego/stego-temp.jsm");
 	var temp_type;
 	var element=temp.element;
@@ -39,6 +39,7 @@ Stego.onLoad = {
 	document.getElementById('type').textContent =temp_type ;
     }
 };
+
 
 Stego.onChange={
 	change:function (value,type){

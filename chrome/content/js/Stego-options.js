@@ -1,5 +1,5 @@
 /**
- * TorStego namespace.
+ * This handles the options page related javascript calls.
  */
 
 Components.utils.import("resource://browser-stego/stego-contentHandler.jsm");
@@ -11,6 +11,9 @@ if ("undefined" == typeof(Options)) {
     var Options = {};
 };
 
+/**
+ * Handles method alls of KeyPairs tab.
+ */
 Options.KeyPairs={
     init:function(){
 
@@ -23,6 +26,9 @@ Options.KeyPairs={
     }
 };
 
+/**
+ * Handles method alls of CipherTexts tab.
+ */
 Options.CipherTexts={
     init:function(){
 
@@ -34,6 +40,10 @@ Options.CipherTexts={
 
     }
 };
+
+/**
+ * Handles method alls of Filters tab.
+ */
 
 Options.Filters={
      init:function(){

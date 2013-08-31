@@ -1,5 +1,5 @@
 /**
- * Stego namespace.
+ * This file is to Handles main overlay related script calls.
  */
 
 Components.utils.import("resource://browser-stego/stego-contentHandler.jsm");

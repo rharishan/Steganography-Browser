@@ -1,6 +1,9 @@
 
 EXPORTED_SYMBOLS=["ContentHandler","type"];
 
+/**
+ * This class contains module for Content handlers. This includes methods to get content type.
+ */
 
 
 function ContentHandler(){

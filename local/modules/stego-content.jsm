@@ -2,7 +2,6 @@ var EXPORTED_SYMBOLS = ["contextFile", "bar"];
 
 
 
-
 function checkType(element) {
 
     //window.alert(window.element);

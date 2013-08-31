@@ -1,6 +1,13 @@
 
 EXPORTED_SYMBOLS=["StegoDataHandler"]
 
+
+/**
+ * This class contains module for Sqlite data access related methods.. This includes methods to add and get keypairs,filters
+ * and ciphertexts.
+ */
+
+
 var file;
 var mDBConn;
 var statement;

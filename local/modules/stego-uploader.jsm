@@ -1,6 +1,10 @@
 
 EXPORTED_SYMBOLS=["StegoUploader"]
 
+/**
+ * This class contains module for web content upload.
+ */
+
 
 function StegoUploader(){
 

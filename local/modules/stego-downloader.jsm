@@ -1,6 +1,10 @@
 
 EXPORTED_SYMBOLS=["StegoDownloader"]
 
+/**
+ * This class contains module for download contents. This is responsible to handle all the web content download related operations.
+ */
+
 
 function StegoDownloader(){
 

@@ -1,6 +1,11 @@
 
 EXPORTED_SYMBOLS=["PrefHandler"]
 
+/**
+ * This class contains module for handle preference related operations.
+ */
+
+
 function PrefHandler(branch_name){
     // Keeping a reference to the observed preference branch or it will get
     // garbage collected.
