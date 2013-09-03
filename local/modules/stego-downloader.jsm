@@ -1,16 +1,15 @@
-
-EXPORTED_SYMBOLS=["StegoDownloader"]
+EXPORTED_SYMBOLS = ["StegoDownloader"]
 
 /**
  * This class contains module for download contents. This is responsible to handle all the web content download related operations.
  */
 
 
-function StegoDownloader(){
+function StegoDownloader() {
 
 }
 
-StegoDownloader.prototype.downloadImage=function(url){
+StegoDownloader.prototype.downloadImage = function (url) {
 
     var ioserv = Components.classes["@mozilla.org/network/io-service;1"]
         .getService(Components.interfaces.nsIIOService);
@@ -27,14 +26,14 @@ StegoDownloader.prototype.downloadImage=function(url){
 
     var size = 0;
     var file_data = "";
-    while(size = bstream.available()) {
+    while (size = bstream.available()) {
         file_data += bstream.readBytes(size);
     }
 
     return file_data;
 }
 
-StegoDownloader.prototype.downloadHTMLVideo=function(url){
+StegoDownloader.prototype.downloadHTMLVideo = function (url) {
     var ioserv = Components.classes["@mozilla.org/network/io-service;1"]
         .getService(Components.interfaces.nsIIOService);
     var channel = ioserv.newChannel(url, 0, null);
@@ -50,14 +49,14 @@ StegoDownloader.prototype.downloadHTMLVideo=function(url){
 
     var size = 0;
     var file_data = "";
-    while(size = bstream.available()) {
+    while (size = bstream.available()) {
         file_data += bstream.readBytes(size);
     }
 
     return file_data;
 }
 
-StegoDownloader.prototype.downloadHTMLAudio=function(url){
+StegoDownloader.prototype.downloadHTMLAudio = function (url) {
     var ioserv = Components.classes["@mozilla.org/network/io-service;1"]
         .getService(Components.interfaces.nsIIOService);
     var channel = ioserv.newChannel(url, 0, null);
@@ -73,7 +72,7 @@ StegoDownloader.prototype.downloadHTMLAudio=function(url){
 
     var size = 0;
     var file_data = "";
-    while(size = bstream.available()) {
+    while (size = bstream.available()) {
         file_data += bstream.readBytes(size);
     }
 

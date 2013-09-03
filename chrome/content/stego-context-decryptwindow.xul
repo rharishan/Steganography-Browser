@@ -3,8 +3,9 @@
 <?xml-stylesheet href="chrome://browser-stego/skin/stego.css" type"text/css"?>
 <!DOCTYPE overlay SYSTEM "chrome://browser-stego/locale/browserOverlay.dtd">
 
-<window id="rootWnd" title="&stego.menu.decrypt.title;"         
-        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="stego-window" onload="Stego.onLoad.load();"> 
+<window id="rootWnd" title="&stego.menu.decrypt.title;"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="stego-window"
+        onload="Stego.onLoad.load();">
 
 
     <script type="application/x-javascript"

@@ -10,7 +10,6 @@
             src="chrome://browser-stego/content/js/Stego.js"/>
 
 
-
     <stringbundleset id="stringbundleset">
         <stringbundle id="stego-string-bundle"
                       src="chrome://browser-stego/locale/browserOverlay.properties"/>
@@ -26,10 +25,10 @@
                 <rows>
                     <row>
                         <label value="&stego.menu.menubar.selection;"></label>
-                        <html:input type="file" value="true"  onchange="Stego.onChange.change(this.value,'url');" />
+                        <html:input type="file" value="true" onchange="Stego.onChange.change(this.value,'url');"/>
                     </row>
                     <row class="message">
-			<label control="message" value="&stego.menu.encrypt.input;"/>
+                        <label control="message" value="&stego.menu.encrypt.input;"/>
                         <textbox id="message" multiline="true" onchange="Stego.onChange.change(this.value,'message');"/>
                     </row>
                     <row>

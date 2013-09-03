@@ -1,16 +1,15 @@
-
-EXPORTED_SYMBOLS=["StegoUploader"]
+EXPORTED_SYMBOLS = ["StegoUploader"]
 
 /**
  * This class contains module for web content upload.
  */
 
 
-function StegoUploader(){
+function StegoUploader() {
 
 }
 
-StegoUploader.prototype.uploadFile=function(aFileURL){
+StegoUploader.prototype.uploadFile = function (aFileURL) {
     var file = Components.classes["@mozilla.org/file/local;1"].
         createInstance(Components.interfaces.nsILocalFile);
 
@@ -23,9 +22,9 @@ StegoUploader.prototype.uploadFile=function(aFileURL){
 
     var data;
     /*if (!Components.isSuccessCode(status)) {
-            // Handle error!
-         return;
-    }*/
+     // Handle error!
+     return;
+     }*/
 
     // The file data is contained within inputStream.
     // You can read it into a string with

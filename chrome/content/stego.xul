@@ -45,10 +45,11 @@
     </vbox>
 
     <popup id="contentAreaContextMenu">
-        <menu id="stego-contextmenu" label="&stego.menu.title;" insertafter="context-selectall" onclick="Overlay.PopUpNode.init(event);">
-            <menupopup> 
+        <menu id="stego-contextmenu" label="&stego.menu.title;" insertafter="context-selectall"
+              onclick="Overlay.PopUpNode.init(event);">
+            <menupopup>
                 <menuitem id="stego-encrypt-menu-item" label="&stego.menu.encrypt;"
-                          oncommand="Overlay.ContextEncrypt.start(event);" />
+                          oncommand="Overlay.ContextEncrypt.start(event);"/>
                 <menuitem id="stego-decrypt-menu-item"
                           label="&stego.menu.decrypt;"
                           oncommand="Overlay.ContextDecrypt.start(event);"/>
@@ -84,27 +85,26 @@
 
     <!-- Firefox -->
     <toolbarpalette id="BrowserToolbarPalette">
-        <toolbarbutton   type="menu-button"
-                id="stego-toolbarbutton"
+        <toolbarbutton type="menu-button"
+                       id="stego-toolbarbutton"
                        class="toolbarbutton"
                        label="&stego.menu.title;"
                        tooltiptext="&stego.menu.title;"
                        oncommand="Overlay.CustomButton.click(event);">
-        <menupopup>
-            <menuitem id="stego-encrypt-menu-item"
-                      label="&stego.menu.encrypt;"
-                      oncommand="Overlay.Encrypt.start(event);"/>
-            <menuitem id="stego-decrypt-menu-item"
-                      label="&stego.menu.decrypt;"
-                      oncommand="Overlay.Decrypt.start(event);"/>
-            <menuitem id="stego-options-menu-item"
-                      label="&stego.menu.options;"
-                      oncommand="Overlay.ContextOptionsMenu.start(event);"/>
-        </menupopup>
+            <menupopup>
+                <menuitem id="stego-encrypt-menu-item"
+                          label="&stego.menu.encrypt;"
+                          oncommand="Overlay.Encrypt.start(event);"/>
+                <menuitem id="stego-decrypt-menu-item"
+                          label="&stego.menu.decrypt;"
+                          oncommand="Overlay.Decrypt.start(event);"/>
+                <menuitem id="stego-options-menu-item"
+                          label="&stego.menu.options;"
+                          oncommand="Overlay.ContextOptionsMenu.start(event);"/>
+            </menupopup>
         </toolbarbutton>
         <!-- More buttons here. -->
     </toolbarpalette>
-
 
 
 </overlay>

@@ -1,7 +1,6 @@
 var EXPORTED_SYMBOLS = ["contextFile", "bar"];
 
 
-
 function checkType(element) {
 
     //window.alert(window.element);
@@ -13,7 +12,7 @@ function checkType(element) {
     var isImage = true;
     if (isImage) {
         //elementLabel.setAttribute("value", "Image");
-        return "image"  ;
+        return "image";
     }
     else if (isSound) {
         return "test";
@@ -25,14 +24,14 @@ function checkType(element) {
         elementLabel.setAttribute("value", "HTML");
     }
     else {
-            return "testttttt";
+        return "testttttt";
     }
 
 }
 
 var bar = {
-    name : "bar",
-    size : 3
+    name: "bar",
+    size: 3
 };
 
 var dummy = "dummy";

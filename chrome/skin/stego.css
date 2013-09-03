@@ -2,7 +2,7 @@
     list-style-image: url("chrome://browser-stego/skin/icons/logo-32x32.png");
 }
 
-.message{
+.message {
     min-height: 200px;
     min-width: 400px;
 }

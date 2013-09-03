@@ -1,4 +1,4 @@
-pref("extensions.stego.filter.enabled",false);
+pref("extensions.stego.filter.enabled", false);
 
 
 

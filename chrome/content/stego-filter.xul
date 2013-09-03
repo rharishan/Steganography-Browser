@@ -40,11 +40,11 @@
             </grid>-->
             <hbox>
                 <caption label="&stego.menu.options.filters.url.input;"/>
-                <textbox id="stego_url" ></textbox>
+                <textbox id="stego_url"></textbox>
             </hbox>
             <hbox>
                 <label value="&stego.menu.options.filters.selection.input;"></label>
-                <checkbox label="Video" id="video" checked="false" />
+                <checkbox label="Video" id="video" checked="false"/>
                 <checkbox label="Audio" id="audio" checked="false"/>
                 <checkbox label="Image" id="image" checked="false"/>
                 <checkbox label="HTML" id="html" checked="false"/>

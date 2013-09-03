@@ -4,8 +4,9 @@
 <!DOCTYPE overlay SYSTEM "chrome://browser-stego/locale/browserOverlay.dtd">
 <prefwindow id="stego-options"
             title="&stego.menu.options.title;"
-	    xmlns:html="http://www.w3.org/1999/xhtml"
-            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" onload="Options.Filters.showFilters();">
+            xmlns:html="http://www.w3.org/1999/xhtml"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+            onload="Options.Filters.showFilters();">
 
     <script type="application/x-javascript"
             src="chrome://browser-stego/content/js/Stego-options.js"/>
@@ -16,73 +17,59 @@
     </stringbundleset>
 
 
-    <prefpane id="pandorafms-pane" label="&stego.menu.options.title;" >
-    <preferences>
-        <preference id="filter-enabled" name="extensions.stego.filter.enabled" type="bool"/>
-    </preferences>
-    <tabbox id="myTabList" selectedIndex="0">
-        <tabs>
-            <tab label="&stego.menu.options.keypairs;"/>
-            <tab label="&stego.menu.options.cipher;"/>
-            <tab label="&stego.menu.options.filters;"/>
-        </tabs>
-        <tabpanels>
-            <tabpanel>
-                <groupbox>
-                    <grid>
-                        <columns>
-                            <column width="200px"></column>
-                            <column width="200px"></column>
-                            <column width="200px"></column>
-                        </columns>
-                        <rows>
-                            <row>
-                                <button>
-                                    <description>&stego.menu.options.keypairs.generate;</description>
-                                </button>
-                                <button>
-                                    <description>&stego.menu.options.keypairs.upload;</description>
-                                </button>
-                                <button>
-                                    <description>&stego.menu.options.keypairs.save;</description>
-                                </button>
-                            </row>
-                        </rows>
-                    </grid>
+    <prefpane id="pandorafms-pane" label="&stego.menu.options.title;">
+        <preferences>
+            <preference id="filter-enabled" name="extensions.stego.filter.enabled" type="bool"/>
+        </preferences>
+        <tabbox id="myTabList" selectedIndex="0">
+            <tabs>
+                <tab label="&stego.menu.options.keypairs;"/>
+                <tab label="&stego.menu.options.cipher;"/>
+                <tab label="&stego.menu.options.filters;"/>
+            </tabs>
+            <tabpanels>
+                <tabpanel>
                     <groupbox>
-                    <caption label="&stego.menu.options.keypairs.existing;"/>
-                    <grid>
-                        <columns>
-                            <column width="300px"></column>
-                            <column width="300px"></column>
-                            <column width="100px"></column>
-                        </columns>
-                        <rows>
-                            <row>
-                                <label value="&stego.menu.options.keypairs.publickey;"></label>
-                                <label value="&stego.menu.options.keypairs.privatekey;"></label>
-                            </row>
-                        </rows>
-                    </grid>
+                        <grid>
+                            <columns>
+                                <column width="200px"></column>
+                                <column width="200px"></column>
+                                <column width="200px"></column>
+                            </columns>
+                            <rows>
+                                <row>
+                                    <button>
+                                        <description>&stego.menu.options.keypairs.generate;</description>
+                                    </button>
+                                    <button>
+                                        <description>&stego.menu.options.keypairs.upload;</description>
+                                    </button>
+                                    <button>
+                                        <description>&stego.menu.options.keypairs.save;</description>
+                                    </button>
+                                </row>
+                            </rows>
+                        </grid>
+                        <groupbox>
+                            <caption label="&stego.menu.options.keypairs.existing;"/>
+                            <grid>
+                                <columns>
+                                    <column width="300px"></column>
+                                    <column width="300px"></column>
+                                    <column width="100px"></column>
+                                </columns>
+                                <rows>
+                                    <row>
+                                        <label value="&stego.menu.options.keypairs.publickey;"></label>
+                                        <label value="&stego.menu.options.keypairs.privatekey;"></label>
+                                    </row>
+                                </rows>
+                            </grid>
+                        </groupbox>
                     </groupbox>
-                </groupbox>
-            </tabpanel>
-            <tabpanel>
-                <groupbox>
-                    <grid>
-                        <columns>
-                            <column width="300px"></column>
-                            <column width="300px"></column>
-                        </columns>
-                        <rows>
-                            <row>
-                                <button oncommand="Overlay.DataHandler.init();"><description>&stego.menu.options.cipher.downloadall;</description></button>
-                                <button><description>&stego.menu.options.cipher.clearall;</description></button>
-                            </row>
-                        </rows>
-                    </grid>
+                </tabpanel>
+                <tabpanel>
                     <groupbox>
-                        <caption label="&stego.menu.options.cipher.existing;"/>
                         <grid>
                             <columns>
                                 <column width="300px"></column>
@@ -90,15 +77,33 @@
                             </columns>
                             <rows>
                                 <row>
-                                    <label value="&stego.menu.options.cipher.content;"></label>
-                                    <label value="&stego.menu.options.cipher.cipher;"></label>
+                                    <button oncommand="Overlay.DataHandler.init();">
+                                        <description>&stego.menu.options.cipher.downloadall;</description>
+                                    </button>
+                                    <button>
+                                        <description>&stego.menu.options.cipher.clearall;</description>
+                                    </button>
                                 </row>
                             </rows>
                         </grid>
+                        <groupbox>
+                            <caption label="&stego.menu.options.cipher.existing;"/>
+                            <grid>
+                                <columns>
+                                    <column width="300px"></column>
+                                    <column width="300px"></column>
+                                </columns>
+                                <rows>
+                                    <row>
+                                        <label value="&stego.menu.options.cipher.content;"></label>
+                                        <label value="&stego.menu.options.cipher.cipher;"></label>
+                                    </row>
+                                </rows>
+                            </grid>
+                        </groupbox>
                     </groupbox>
-                </groupbox>
-            </tabpanel>
-            <tabpanel >
+                </tabpanel>
+                <tabpanel>
                     <groupbox>
                         <grid>
                             <columns>
@@ -107,12 +112,16 @@
                             </columns>
                             <rows>
                                 <row>
-                                    <button oncommand="Options.Filters.add(event)"><description>&stego.menu.options.filters.new;</description></button>
+                                    <button oncommand="Options.Filters.add(event)">
+                                        <description>&stego.menu.options.filters.new;</description>
+                                    </button>
                                     <radiogroup preference="filter-enabled">
                                         <hbox>
-                                        <label value="&stego.menu.options.filters.filtering;"/>
-                                        <radio id="" label="&stego.menu.options.filters.filtering.enable;" accesskey="R"  value="true" oncommand=""/>
-                                        <radio id="" label="&stego.menu.options.filters.filtering.disable;"  accesskey="G"  selected="true" value="false" oncommand=""/>
+                                            <label value="&stego.menu.options.filters.filtering;"/>
+                                            <radio id="" label="&stego.menu.options.filters.filtering.enable;"
+                                                   accesskey="E" value="true" oncommand=""/>
+                                            <radio id="" label="&stego.menu.options.filters.filtering.disable;"
+                                                   accesskey="D" selected="true" value="false" oncommand=""/>
                                         </hbox>
                                     </radiogroup>
 
@@ -121,13 +130,13 @@
                         </grid>
                         <groupbox>
                             <caption label="&stego.menu.options.filters.existing;"/>
-				<html:table id="stego_filters_table">
-					<html:tr>
-						<html:td width="300px">&stego.menu.options.filters.url;</html:td>
-						<html:td width="200px">&stego.menu.options.filters.content;</html:td>
-					</html:tr>
-				
-				</html:table>
+                            <html:table id="stego_filters_table">
+                                <html:tr>
+                                    <html:td width="300px">&stego.menu.options.filters.url;</html:td>
+                                    <html:td width="200px">&stego.menu.options.filters.content;</html:td>
+                                </html:tr>
+
+                            </html:table>
                             <!--<grid>
                                 <columns>
                                     <column width="300px"></column>
@@ -143,8 +152,8 @@
                             </grid>-->
                         </groupbox>
                     </groupbox>
-            </tabpanel>
-        </tabpanels>
-    </tabbox>
+                </tabpanel>
+            </tabpanels>
+        </tabbox>
     </prefpane>
 </prefwindow>
