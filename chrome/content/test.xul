@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://browser-stego/skin/stego.css" type"text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://browser-stego/locale/browserOverlay.dtd">
+
+<window id="rootWnd" title="&stego.menu.encrypt.title;"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="stego-window">
+    <script type="application/x-javascript"
+            src="chrome://browser-stego/content/js/Stego.js"/>
+
+
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="stego-string-bundle"
+                      src="chrome://browser-stego/locale/browserOverlay.properties"/>
+    </stringbundleset>
+
+    <vbox>
+        <groupbox align="start">
+
+            <hbox>
+                <button oncommand="" align="centre">
+                    <description>&stego.menu.encrypt.button;</description>
+                </button>
+            </hbox>
+        </groupbox>
+    </vbox>
+
+</window>

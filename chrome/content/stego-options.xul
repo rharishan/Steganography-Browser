@@ -77,7 +77,7 @@
                             </columns>
                             <rows>
                                 <row>
-                                    <button oncommand="Overlay.DataHandler.init();">
+                                    <button oncommand="">   <!--Overlay.DataHandler.init();-->
                                         <description>&stego.menu.options.cipher.downloadall;</description>
                                     </button>
                                     <button>
